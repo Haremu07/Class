@@ -3,25 +3,38 @@ import { useState } from "react"
 
 const App = () => {
   const [input, setInput] = useState()
-  const [percent, setPercent] = useState("")
+  const [percent, setPercent] = useState()
+  const [inputPercent, setInputPercent] = useState()
+
 
  
   const handleInput = () => {
-     setPercent(input / 10)
+     setPercent(input / inputPercent)
      setInput("")
+     setInputPercent("")
   }
 
   return (
     <div className='Body'>
       <div className="Card">
-        <h1>Calculate</h1>
+        <h1>Percentage calculator</h1>
+           <h2>{inputPercent}% of {input}  </h2>
+          <div className="PercentBox">
+            <p>Percent:</p>
+           <input className="input" type="text" value={inputPercent}  onChange={(e) => setInputPercent(e.target.value)}/>
+          </div>
+
+          <div className="PercentBox">
+            <p>Number:</p>
           <input 
           className="input"
           type="text"
           value={input}
-           onChange={(e) => setInput(e.target.value)} />
-           <h2>10% of {input} is: </h2>
-          <div className="percent">{percent}</div>
+          onChange={(e) => setInput(e.target.value)} />
+          </div>
+          <div className="percent">
+            <p>Result:</p>
+            {percent}</div>
           <button onClick={handleInput}>cal</button>
       </div>
     </div>

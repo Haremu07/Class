@@ -27,8 +27,13 @@
 
 .input{
   width: 70%;
-  height: 6%;
+  height: 100%;
   padding-left: 10px;
+}
+
+.PercentBox{
+  display: flex;
+  gap: 5px;
 }
 
 .percent{
@@ -37,6 +42,9 @@
   /* background-color: red; */
   border: solid rgba(0, 0, 0, 0.459) 1px;
   padding-left: 10px;
+  color: red;
+  display: flex;
+  gap: 5px;
 }
 
 button{
