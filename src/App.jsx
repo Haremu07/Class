@@ -9,7 +9,7 @@ const App = () => {
 
  
   const handleInput = () => {
-     setPercent(input / inputPercent)
+     setPercent((input * inputPercent)/ 100)
      setInput("")
      setInputPercent("")
   }
