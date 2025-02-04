@@ -21,14 +21,14 @@ const App = () => {
            <h2>{inputPercent}% of {input}  </h2>
           <div className="PercentBox">
             <p>Percent:</p>
-           <input className="input" type="text" value={inputPercent}  onChange={(e) => setInputPercent(e.target.value)}/>
+           <input className="input" type="number" value={inputPercent}  onChange={(e) => setInputPercent(e.target.value)}/>
           </div>
 
           <div className="PercentBox">
             <p>Number:</p>
           <input 
           className="input"
-          type="text"
+          type="number"
           value={input}
           onChange={(e) => setInput(e.target.value)} />
           </div>
